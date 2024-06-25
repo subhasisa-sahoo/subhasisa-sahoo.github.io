@@ -17,6 +17,9 @@
   --date-color-light: #8b8989;
   --date-color-dark: #8f8f8f;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, sans-serif;
   transition: background-color var(--transition-duration) var(--ease-in-out),
