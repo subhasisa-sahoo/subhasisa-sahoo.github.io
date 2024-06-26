@@ -608,6 +608,21 @@ border: 1px solid rgba(255, 255, 255, 0.3)
   }
 }
 /* PROJECT_SECTION */
+.modal{
+  .contribution{
+    div{
+      display: flex;
+    }
+    img{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 7px;
+      margin-right: 10px;
+    }
+   
+  }}
 .project-container {
   display: flex;
   flex-wrap: wrap;
