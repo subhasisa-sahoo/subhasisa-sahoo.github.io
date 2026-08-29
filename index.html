@@ -5,494 +5,464 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="-Y9iQXDF0KXArI4_MdFcmeg7EHWsovtc6WlL4Dtm320" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Subhasisa's Portfolio">
-  <meta property="og:image" content="https://subhasisa-sahoo.github.io/IMAGE/pp.jpg">
-  <meta property="og:image:width" content="170">
-  <meta property="og:image:height" content="170">  
+  <meta name="description" content="Subhasisa Sahoo — System Engineer at TCS. Web developer building fast, clean, user-friendly interfaces." />
+  <meta property="og:title" content="Subhasisa Sahoo — Portfolio" />
+  <meta property="og:image" content="https://subhasisa-sahoo.github.io/IMAGE/pp.jpg" />
+  <meta property="og:image:width" content="170" />
+  <meta property="og:image:height" content="170" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts: preconnect + only the weights we actually use, for faster loads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <title>Subhasisa</title>
+  <title>Subhasisa Sahoo · System Engineer @ TCS</title>
 </head>
 
-<body>
-  <Desktop-View>
-    <nav>
-      <div class="navbar-container">
-        <div class="logo">
-          <!-- <p><𝖘𝖚𝖇𝖍𝖆𝖘𝖎𝖘𝖆/>✍</p> -->
-          <p><span><</span> Subhasisa />✍</p>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skill">Skills</a></li>
-          <li><a href="#edu">Education</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#">Experience</a></li>
-        </ul>
-        <div class="mode">
-          <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto"
-            aria-live="polite">
-            <div class="icon sun"></div>
-            <div class="icon moon"></div>
-          </button>
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
+<body data-theme="dark">
+
+  <!-- Inline icon sprite: avoids pulling in a whole icon-font just for a handful of glyphs -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9.98h4V21H3ZM10 9.98h3.83v1.51h.05c.53-.98 1.83-2.02 3.77-2.02 4.03 0 4.77 2.55 4.77 5.86V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.32-1.96 2.69V21h-4Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M3 3h4.3l4 5.6L16 3h3.5l-6.1 7.9L20 21h-4.3l-4.4-6.1L6.2 21H2.7l6.6-8.5Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3Zm4 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5Zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5ZM17.3 6.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.4 2 6.1 5.2a1 1 0 0 0 1.3 0L19 7Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 2.5 9 4a1 1 0 0 1 .3 1.3L8 7.7a12 12 0 0 0 5.3 5.3l2.4-1.3a1 1 0 0 1 1.3.3l1.5 2.4a1 1 0 0 1-.2 1.3l-2 1.7a2 2 0 0 1-1.9.4A18 18 0 0 1 3.2 6.6a2 2 0 0 1 .4-1.9l1.7-2a1 1 0 0 1 1.3-.2Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11.2l3.6-3.6L17 12l-5 5-5-5 1.4-1.4 3.6 3.6V3ZM5 19h14v2H5Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h14.2l-5.1-5.1L14.5 5.5 22 12l-7.5 6.5L13.1 17l5.1-5.1H4Z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14ZM5 5h6v2H7v10h10v-4h2v6H5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6Z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M9 3h6a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2Zm0 4h6V5H9Zm-5 3v9h16V10H4Zm7 2h2v2h-2Z"/></symbol>
+  </svg>
+
+  <!-- fixed sparkle / parallax backdrop, sits behind everything -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div id="progress-bar"></div>
+
+  <nav>
+    <div class="navbar-container">
+      <a href="#" class="logo"><span>&lt;</span>Subhasisa<span>/&gt;</span></a>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#edu">Education</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+          <span class="icon sun"></span>
+          <span class="icon moon"></span>
+        </button>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Open menu">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
         </div>
       </div>
-    </nav>
-    <div id="progress-bar"></div>
-    <hero-section>
-      <div class="left-sec">
-        <h1>Hi, There<br />I am Subhasisa Sahoo<br /></h1>
-        <div class="typing-container">
-          <span class="static-text">
-            <h1>I am a</h1>
-          </span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-blob blob-a" data-parallax="0.12"></div>
+    <div class="hero-blob blob-b" data-parallax="0.22"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow" data-reveal>Odisha, India · Open to interesting problems</p>
+        <h1 class="hero-name" id="hero-name" data-reveal>Subhasisa Sahoo</h1>
+        <div class="typing-container" data-reveal>
+          <span class="static-text">I am a</span>
           <span class="dynamic-text-container">
-            <h1><span class="dynamic-text"></span></h1>
-            <span class="cursor">|</span>
+            <span class="dynamic-text"></span><span class="cursor">|</span>
           </span>
+        </div>
+
+        <a class="status-pill" href="#experience" data-reveal>
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Currently a System Engineer at <strong>TCS</strong>
+        </a>
+
+        <p class="hero-bio" data-reveal>
+          I build seamless, responsive interfaces and solid backends. Since finishing my
+          B.Tech, I've taken that foundation into a full-time engineering role at
+          Tata Consultancy Services — while still shipping personal projects on the side.
+        </p>
+
+        <div class="hero-actions" data-reveal>
+          <a class="btn-primary" href="Subhasisa_Sahoo_CV.pdf" download>
+            <svg width="18" height="18"><use href="#i-download" /></svg> Download CV
+          </a>
+          <a class="btn-ghost" href="#contact">
+            Say hello <svg width="16" height="16"><use href="#i-arrow" /></svg>
+          </a>
+        </div>
+
+        <div class="social-icons" data-reveal>
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/subhasisa-sahoo-285616274" aria-label="LinkedIn"><svg width="20" height="20"><use href="#i-linkedin" /></svg></a>
+          <a target="_blank" rel="noopener" href="https://github.com/subhasisa-sahoo" aria-label="GitHub"><svg width="20" height="20"><use href="#i-github" /></svg></a>
+          <a target="_blank" rel="noopener" href="#" aria-label="X / Twitter"><svg width="20" height="20"><use href="#i-x" /></svg></a>
+          <a target="_blank" rel="noopener" href="https://www.instagram.com/subhasisa_sahoo?igsh=OHJqdW9qZ3BjY2w3" aria-label="Instagram"><svg width="20" height="20"><use href="#i-instagram" /></svg></a>
+        </div>
+      </div>
+
+      <div class="hero-right" data-parallax="0.08">
+        <div class="hero-frame">
+          <img loading="lazy" src="IMAGE/slider-min.gif" alt="Coding illustration" />
+        </div>
+        <div class="floating-card card-tcs">🟢 TCS · System Engineer</div>
+        <div class="floating-card card-grad">🎓 B.Tech · GIET, 2026</div>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to about">↓</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <p class="eyebrow center" data-reveal>About</p>
+    <h2 data-reveal>A little about me</h2>
+    <div class="about-container">
+      <div class="about-left" data-reveal>
+        <div class="about-photo-frame">
+          <img loading="lazy" src="IMAGE/pp.jpg" alt="Subhasisa Sahoo" />
+        </div>
+      </div>
+      <div class="about-right" data-reveal>
+        <p>
+          Hi! 👋 I'm <span class="accent-text">Subhasisa Sahoo</span>, originally from Nayagarh, Odisha. 🌏
+          I completed my B.Tech in Computer Science &amp; Engineering at GIET University
+          (Gandhi Institute of Engineering &amp; Technology), Gunupur, in <strong>April 2026</strong>,
+          and on <strong>7th May 2026</strong> I joined <strong>Tata Consultancy Services (TCS)</strong>
+          as a <strong>System Engineer</strong>. 💼
+        </p>
+        <p>
+          Alongside my day-to-day work, I stay hands-on as a web developer 💻 — building
+          frontend interfaces that feel effortless to use, and backend systems that stay
+          solid under load. 🔧🔗
+        </p>
+        <div class="about-meta">
+          <div class="info-item"><svg width="18" height="18"><use href="#i-user" /></svg><p>Subhasisa Sahoo</p></div>
+          <div class="info-item"><svg width="18" height="18"><use href="#i-mail" /></svg><p>subhasisasahoo098@gmail.com</p></div>
+          <div class="info-item"><svg width="18" height="18"><use href="#i-phone" /></svg><p>+91 8260907668</p></div>
+        </div>
+        <div class="social-icons">
+          <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/subhasisa-sahoo-285616274" aria-label="LinkedIn"><svg width="18" height="18"><use href="#i-linkedin" /></svg></a>
+          <a target="_blank" rel="noopener" href="https://github.com/subhasisa-sahoo" aria-label="GitHub"><svg width="18" height="18"><use href="#i-github" /></svg></a>
+          <a target="_blank" rel="noopener" href="#" aria-label="X / Twitter"><svg width="18" height="18"><use href="#i-x" /></svg></a>
+          <a target="_blank" rel="noopener" href="https://www.instagram.com/subhasisa_sahoo?igsh=OHJqdW9qZ3BjY2w3" aria-label="Instagram"><svg width="18" height="18"><use href="#i-instagram" /></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section" id="skill">
+    <p class="eyebrow center" data-reveal>Toolbox</p>
+    <h2 data-reveal>Core skills</h2>
+
+    <div class="skill-showcase" data-reveal>
+      <div class="skill-group">
+        <div class="group-header">
+          <span class="group-badge">01</span>
+          <h3>Frontend</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/reactjs.webp" alt="ReactJS" /><span>ReactJS</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/html.webp" alt="HTML5" /><span>HTML5</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/css3.webp" alt="CSS3" /><span>CSS3</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" /><span>JavaScript</span></div>
+          <div class="skill-chip"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png" alt="TailwindCSS" /><span>Tailwind</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/bootstrap.webp" alt="Bootstrap" /><span>Bootstrap</span></div>
+          <div class="skill-chip"><img loading="lazy" src="https://img.icons8.com/color/48/000000/sass.png" alt="Sass" /><span>Sass</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-header">
+          <span class="group-badge">02</span>
+          <h3>Backend &amp; Data</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/php.webp" alt="PHP" /><span>PHP</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/mysql.webp" alt="MySQL" /><span>MySQL</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/python.webp" alt="Python" /><span>Python</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/java.webp" alt="JAVA" /><span>JAVA</span></div>
+          <div class="skill-chip"><img loading="lazy" src="IMAGE/icon/c.webp" alt="C" /><span>C</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="group-header">
+          <span class="group-badge">03</span>
+          <h3>Tools &amp; Others</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-chip"><img loading="lazy" src="https://img.icons8.com/fluency/48/000000/android-os.png" alt="Android" /><span>Android</span></div>
+          <div class="skill-chip"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Blogger_icon_2017.svg/1200px-Blogger_icon_2017.svg.png" alt="Blogger" /><span>Blogger</span></div>
+          <div class="skill-chip skill-chip-wide"><img loading="lazy" src="IMAGE/icon/javascript--v1.webp" alt="Problem solving" /><span>Debugging</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE: current role, featured on its own -->
+  <section class="experience-section" id="experience">
+    <p class="eyebrow center" data-reveal>Experience</p>
+    <h2 data-reveal>Currently building at</h2>
+    <div class="exp-card" data-reveal>
+      <div class="exp-glow" aria-hidden="true"></div>
+      <div class="exp-badge"><span class="pulse-dot" aria-hidden="true"></span> Actively employed</div>
+      <div class="exp-head">
+        <div class="t-logo t-logo-lg t-logo-tcs-img">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iOlzGG23Q4Uag3BGDEPJDL8RsSKRW9fhfjG0dTVFZg&s=10" alt="TCS logo" />
+        </div>
+        <div>
+          <h3>Tata Consultancy Services</h3>
+          <p class="t-role">System Engineer</p>
+        </div>
+      </div>
+      <span class="t-date"><svg width="14" height="14"><use href="#i-briefcase" /></svg> 7 May 2026 — Present</span>
+      <p class="t-desc">
+        Joined TCS right after graduating, working as a System Engineer — applying my
+        development background to real production systems, cross-functional teams, and
+        enterprise-scale problem solving, while continuing to grow as an engineer.
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="edu-section" id="edu">
+    <p class="eyebrow center" data-reveal>Education</p>
+    <h2 data-reveal>Academic background</h2>
+    <div class="timeline">
+
+      <div class="t-item" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-head">
+            <img class="t-logo" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/GIET_University_Logo.tif/lossy-page1-640px-GIET_University_Logo.tif.jpg" alt="GIET University logo" />
+            <div>
+              <h3>GIET University, Gunupur</h3>
+              <p class="t-role">B.Tech, Computer Science &amp; Engineering</p>
+            </div>
+          </div>
+          <span class="t-date">2022 — April 2026 · Completed</span>
+          <p class="t-desc">
+            Graduated with a CGPA of 8.11. Coursework spanned Data Structures &amp; Algorithms,
+            Object-Oriented Programming, Database Management Systems, Operating Systems and more.
+          </p>
+        </div>
+      </div>
+
+      <div class="t-item" data-reveal>
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-head">
+            <img class="t-logo" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD0d3M8bHGrmKuiFE6gQ0XWF5viP4y_x18hA&s" alt="Inspire Residential College logo" />
+            <div>
+              <h3>Inspire Residential College</h3>
+              <p class="t-role">+2 Science</p>
+            </div>
+          </div>
+          <span class="t-date">2020 — 2022 · Completed</span>
+          <p class="t-desc">Completed 12th grade in the Science stream.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="project-section" id="project">
+    <p class="eyebrow center" data-reveal>Work</p>
+    <h2 data-reveal>Projects</h2>
+    <div class="project-container">
+      <div class="card" data-reveal onclick="openModal('food-order-modal')">
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (370).webp" alt="Food Order website screenshot" /></div>
+        <h3>Food Order Website</h3>
+        <p class="date">December 2023</p>
+        <p>
+          A hassle-free online food ordering platform. A simple login unlocks a
+          user-friendly interface showcasing a tempting array of food items.
+        </p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">PHP</span><span class="tag">MYSQL</span></div>
+      </div>
+
+      <div class="card" data-reveal onclick="openModal('ecommerce-web-modal')">
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (371).webp" alt="Ecommerce web app screenshot" /></div>
+        <h3>Ecommerce Web App</h3>
+        <p class="date">May 2024</p>
+        <p>
+          A one-stop shop built around user-friendly navigation for a seamless
+          shopping experience, from browsing to checkout.
+        </p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">BOOTSTRAP</span><span class="tag">JQUERY</span><span class="tag">PHP</span><span class="tag">PHPMAILER</span><span class="tag">AOS</span><span class="tag">MYSQL</span></div>
+      </div>
+
+      <div class="card" data-reveal onclick="openModal('geimini-ai-web-modal')">
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (380).webp" alt="Gemini AI clone screenshot" /></div>
+        <h3>Gemini AI Clone</h3>
+        <p class="date">June 2024</p>
+        <p>
+          An AI-powered web app built with React.js and Google APIs — understands
+          and responds to user input, and works smoothly on any device.
+        </p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">ReactJS</span><span class="tag">Google API</span></div>
+      </div>
+
+      <div class="card" data-reveal onclick="openModal('news-api-web-modal')">
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (381).webp" alt="News tracker web app screenshot" /></div>
+        <h3>Latest News Tracker Web App</h3>
+        <p class="date">June 2024</p>
+        <p>
+          A React.js app that tracks the latest news in real time through a news
+          API, with a sleek, responsive design.
+        </p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">ReactJS</span><span class="tag">News API</span></div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="food-order-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal('food-order-modal')" aria-label="Close"><svg width="18" height="18"><use href="#i-close" /></svg></button>
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (370).webp" alt="Food Order Web Screenshot" /></div>
+        <h2>Food Order Website</h2>
+        <p class="date">December 2023</p>
+        <div class="icons">
+          <span class="icon-chip"><img src="IMAGE/icon/html.webp" alt="HTML" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/css3.webp" alt="CSS" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/php.webp" alt="PHP" /></span>
+          <span class="icon-chip"><img src="https://iconape.com/wp-content/png_logo_vector/phpmailer.png" alt="PHPMailer" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/mysql.webp" alt="mysql" /></span>
         </div>
         <p>
-          I am a passionate and dedicated web developer with a keen eye for
-          design and a love for creating seamless user experiences. I
-          specialize in building dynamic and responsive websites that are both
-          aesthetically pleasing and functionally robust. With a strong
-          foundation in modern web technologies and a continuous drive to
-          learn and grow.
-          <!-- <br>
-          "Debugging: being the detective in a crime movie where you are also the murderer."
-       -->
-           </p>
-        <button class="download-cv">
-          Download CV <img src="IMAGE/asset/download_icon.png" />
-        </button>
-        <div class="social-icons">
-          <a target="_blank" href="www.linkedin.com/in/subhasisa-sahoo-285616274"><i class="fab fa-linkedin"></i></a>
-          <a target="_blank" href="https://github.com/subhasisa-sahoo"><i class="fab fa-github"></i></a>
-          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-          <a target="_blank" href="https://www.instagram.com/subhasisa_sahoo?igsh=OHJqdW9qZ3BjY2w3"><i class="fab fa-instagram"></i></a>
+          Online Food Order project stands out as your go-to platform for a
+          hassle-free and delightful dining experience. With a simple login,
+          users unlock a world of culinary possibilities, navigating through a
+          user-friendly interface that showcases a tempting array of food items.
+        </p>
+        <div class="modal-actions">
+          <a target="_blank" rel="noopener" href="https://foodparcel.000webhostapp.com/" class="view-app"><svg width="16" height="16"><use href="#i-external" /></svg> View Live Project</a>
+          <a target="_blank" rel="noopener" href="https://github.com/subhasisa-sahoo/simple-food-order-system.git" class="view-app secondary"><svg width="16" height="16"><use href="#i-github" /></svg> View Code</a>
         </div>
       </div>
-      <div class="right-sec">
-        <img loading="lazy" src="IMAGE/slider-min.gif" alt="" srcset="" />
-      </div>
-    </hero-section>
+    </div>
 
-    <about-section id="about">
-      <h2>About me</h2>
-      <div class="about-container">
-        <div class="left-sec" data-aos="fade-up">
-          <img loading="lazy" src="IMAGE/pp.jpg" alt="" srcset="" />
+    <div id="ecommerce-web-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal('ecommerce-web-modal')" aria-label="Close"><svg width="18" height="18"><use href="#i-close" /></svg></button>
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (371).webp" alt="Ecommerce web app" /></div>
+        <h2>E-commerce Web App</h2>
+        <p class="date">May 2024</p>
+        <p>
+          Welcome to the one-stop shop for all your needs. This E-commerce Web App is
+          designed with a focus on user-friendly navigation, ensuring a seamless shopping
+          experience through innovative design and development.
+        </p>
+        <div class="icons">
+          <span class="icon-chip"><img src="IMAGE/icon/html.webp" alt="HTML" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/css3.webp" alt="CSS" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/bootstrap.webp" alt="Bootstrap" /></span>
+          <span class="icon-chip"><img src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-8-1175153.png" alt="jQuery" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/php.webp" alt="PHP" /></span>
+          <span class="icon-chip"><img src="https://iconape.com/wp-content/png_logo_vector/phpmailer.png" alt="PHPMailer" /></span>
+          <span class="icon-chip"><img src="https://ps.w.org/cvw-pb-animation/assets/icon-256x256.png?rev=2077939" alt="AOS" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/mysql.webp" alt="mysql" /></span>
         </div>
-        <div class="right-sec" data-aos="fade-up">
-          <div class="right-sec1">
-            <p>
-              Hi! 👋 My name is <span>Subhasisa Sahoo</span> from Nayagarh, Odisha. 🌏 I am
-              currently pursuing BTech in CSE at GIET University (Gandhi
-              Institute of Engineering & Technology) in Gunupur, Odisha. 🎓 I
-              am a web developer 💻 who is very passionate and dedicated to my
-              work, constantly acquiring the skills and knowledge necessary to
-              make a project successful. 🚀✨. I have worked on several
-              frontend projects which helped me in getting practical knowledge
-              in building user-friendly interfaces. More over, I have done a
-              lot of backend projects (server-side applications) that are
-              solid as well as optimized. 🔧🔗
-            </p>
-          </div>
-          <div class="right-sec2">
-            <div class="info-item">
-              <i class="fas fa-user"></i>
-              <p>Subhasisa Sahoo</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <p>subhasisasahoo098@gmail.com</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <p>+91 8260907668</p>
-            </div>
-            <div class="social-icons">
-              <a target="_blank" href="www.linkedin.com/in/subhasisa-sahoo-285616274"><i class="fab fa-linkedin"></i></a>
-              <a target="_blank" href="https://github.com/subhasisa-sahoo"><i class="fab fa-github"></i></a>
-              <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-              <a target="_blank" href="https://www.instagram.com/subhasisa_sahoo?igsh=OHJqdW9qZ3BjY2w3"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="contribution">
+          <p class="contribution-label">Built with</p>
+          <div class="contribution-list">
+            <div class="contributor"><img src="https://i.postimg.cc/L54yvySH/sub.jpg" alt="" /><p>Subhasisa Sahoo</p></div>
+            <div class="contributor"><img src="https://i.ibb.co/7GywCHw/Screenshot-2024-10-25-12-00-35-00-1c337646f29875672b5a61192b9010f9.jpg" alt="" /><p>Nibedita Kar</p></div>
+            <div class="contributor"><img src="https://i.postimg.cc/Qt3YK8nK/Screenshot-2024-06-26-180949.png" alt="" /><p>Sipun Sahoo</p></div>
           </div>
         </div>
-      </div>
-    </about-section>
-    <section class="skills-section">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill-item">
-          <img loading="lazy"
-            src="IMAGE/icon/reactjs.webp"
-            alt="ReactJS" />
-          <p>ReactJS</p>
+        <div class="modal-actions">
+          <a target="_blank" rel="noopener" href="https://github.com/subhasisa-sahoo/Ecommerce-Online-Web.git" class="view-app"><svg width="16" height="16"><use href="#i-github" /></svg> View Code</a>
         </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/php.webp" alt="PHP" />
-          <p>PHP</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/c.webp" alt="C" />
-          <p>C</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/java.webp" alt="JAVA" />
-          <p>JAVA</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/python.webp" alt="Python" />
-          <p>Python</p>
-        </div>
-
-        <div class="skill-item">
-          <img loading="lazy" src="https://img.icons8.com/fluency/48/000000/android-os.png" alt="Android" />
-          <p>Android</p>
-        </div>
-
-        <div class="skill-item">
-          <img loading="lazy"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-            alt="TailwindCSS" />
-          <p>TailwindCSS</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/bootstrap.webp" alt="Bootstrap" />
-          <p>Bootstrap</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="https://img.icons8.com/color/48/000000/sass.png" alt="Sass" />
-          <p>Sass</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/html.webp" alt="HTML5" />
-          <p>HTML5</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/css3.webp" alt="CSS3" />
-          <p>CSS3</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" />
-          <p>JavaScript</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy" src="IMAGE/icon/mysql.webp" alt="mysql" />
-          <p>MySql</p>
-        </div>
-        <div class="skill-item">
-          <img loading="lazy"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Blogger_icon_2017.svg/1200px-Blogger_icon_2017.svg.png"
-            alt="blogger" />
-          <p>Blogger</p>
-        </div>
-      </div>
-    </section>
-    <education-section id="edu">
-      <h2 data-aos="fade-up">Education</h2>
-      <div class="timeline">
-        <div class="container right-container">
-          <img loading="lazy"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/GIET_University_Logo.tif/lossy-page1-640px-GIET_University_Logo.tif.jpg"
-            alt="" srcset="">
-          <div class="text-box" data-aos="fade-up">
-            <h2>GIET University, Gunupur</h2>
-            <p>Bachelor of Technology</p>
-            <small>2022-2026</small>
-            <div class="degree-info">
-              <p>
-                <span>&#9889;</span>I am currently pursuing a Bachelor's degree
-                in Computer Science and Engineering at Gandhi Institute of
-                Engineering and Technology, Gunupur. I have completed 4
-                semesters and have a CGPA of 8.11. I have taken courses in Data
-                Structures and Algorithms, Object-Oriented Programming, Database
-                Management Systems, Operating Systems etc.
-              </p>
-            </div>
-          </div>
-          <div class="right-contain-arrow"></div>
-        </div>
-        <div class="container left-container">
-          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD0d3M8bHGrmKuiFE6gQ0XWF5viP4y_x18hA&s" alt=""
-            srcset="">
-          <div class="text-box"  data-aos="fade-up">
-            <h2>Inspire Residential College</h2>
-            <p>+2 Science</p>
-            <small>2020-2022</small>
-            <p>I have completed my 12th in the stream of Science from Inspire Residential College.</p>
-          </div>
-          <div class="left-contain-arrow"></div>
-        </div>
-      </div>
-</body>
-</education-section>
-
-<project-section id="project">
-  <h2  data-aos="fade-up">Project</h2>
-  <div class="project-container"  data-aos="fade-up">
-    <div class="card" onclick="openModal('food-order-modal')">
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (370).webp" alt="Todo List App Screenshot" />
-      </div>
-      <h3>Food Order Website</h3>
-      <p class="date">December 2023</p>
-      <p>
-        Online Food Order project stands out as your go-to platform for a
-        hassle-free and delightful dining experience. With a simple login,
-        users unlock a world of culinary possibilities, navigating through
-        a user-friendly interface that showcases a tempting array of food
-        items.
-      </p>
-      <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JS</span>
-        <span class="tag">PHP</span>
-        <span class="tag">MYSQL</span>
-      </div>
-
-    </div>
-    <div class="card" onclick="openModal('ecommerce-web-modal')">
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (371).webp" alt="Ecommerce Web App" />
-      </div>
-      <h3>Ecommerce Web App</h3>
-      <p class="date">May 2024</p>
-      <p>
-        Welcome to the one-stop shop for all your needs. This E-commerce Web App is designed with a focus on user-friendly navigation, ensuring a seamless shopping experience. The project showcases efficient and customer-centric online shopping solutions through innovative design and development.
-      </p>
-      <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JS</span>
-        <span class="tag">BOOTSTRAP</span>
-        <span class="tag">JQUERY</span>
-        <span class="tag">PHP</span>
-        <span class="tag">PHPMAILER</span>
-        <span class="tag">AOS</span>
-        <span class="tag">MYSQL</span>
-      </div>
-
-    </div>
-    <div class="card" onclick="openModal('geimini-ai-web-modal')">
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (380).webp" alt="geimini Web App" />
-      </div>
-      <h3>Gemini Ai Clone</h3>
-      <p class="date">Jun 2024</p>
-      <p>
-        Created an AI-powered web app using React.js and Google APIs. This app understands and responds to user input,
-        works smoothly on any device, and has an easy-to-use interface. It showcases my skills in building smart,
-        responsive web applications.
-      </p>
-      <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JS</span>
-        <span class="tag">ReactJS</span>
-        <span class="tag">Google API</span>
-      </div>
-
-    </div>
-    <div class="card" onclick="openModal('news-api-web-modal')">
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (381).webp" alt="geimini Web App" />
-      </div>
-      <h3>Latest News tracker Web App</h3>
-      <p class="date">Jun 2024</p>
-      <p>
-        Developed a web app using React.js and a news API to track the latest news in real-time. The app features a
-        sleek, responsive design, delivering up-to-date news articles seamlessly on any device.
-      </p>
-      <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JS</span>
-        <span class="tag">ReactJS</span>
-        <span class="tag">News API</span>
       </div>
     </div>
-  </div>
 
-
-  <!-- 1. Modal for Food Order Web -->
-  <div id="food-order-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('food-order-modal')">&times;</span>
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (370).webp" alt="Food Order Web Screenshot" />
+    <div id="geimini-ai-web-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal('geimini-ai-web-modal')" aria-label="Close"><svg width="18" height="18"><use href="#i-close" /></svg></button>
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (380).webp" alt="Gemini AI web app" /></div>
+        <h2>Gemini AI Web App</h2>
+        <p class="date">May 2024</p>
+        <p>
+          Created an AI-powered web app using React.js and Google APIs. This app understands
+          and responds to user input, works smoothly on any device, and has an easy-to-use interface.
+        </p>
+        <div class="icons">
+          <span class="icon-chip"><img src="IMAGE/icon/html.webp" alt="HTML" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/css3.webp" alt="CSS" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/reactjs.webp" alt="React JS" /></span>
+          <span class="icon-chip"><img src="https://cdn-icons-png.freepik.com/512/10329/10329422.png" alt="Google API" /></span>
+        </div>
+        <div class="modal-actions">
+          <a target="_blank" rel="noopener" href="https://clone-ai.netlify.app/" class="view-app"><svg width="16" height="16"><use href="#i-external" /></svg> View Live Project</a>
+          <a target="_blank" rel="noopener" href="https://github.com/subhasisa-sahoo/Gemini-AI-Clone.git" class="view-app secondary"><svg width="16" height="16"><use href="#i-github" /></svg> View Code</a>
+        </div>
       </div>
-      <h2>Food Order Website</h2>
-      <p class="date">December 2023</p>
-
-      <div class="icons">
-        <img src="IMAGE/icon/html.webp" alt="HTML" />
-        <img src="IMAGE/icon/css3.webp" alt="CSS" />
-        <img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" />
-        <img src="IMAGE/icon/php.webp" alt="PHP" />
-        <img src="https://iconape.com/wp-content/png_logo_vector/phpmailer.png" alt="PHPMailer" />
-        <img src="IMAGE/icon/mysql.webp" alt="mysql" />
-      </div>
-      <p>
-        Online Food Order project stands out as your go-to platform for a
-        hassle-free and delightful dining experience. With a simple login,
-        users unlock a world of culinary possibilities, navigating through a
-        user-friendly interface that showcases a tempting array of food
-        items.
-      </p>
-      <a target="_blank" href="https://github.com/subhasisa-sahoo/simple-food-order-system.git" class="view-app">View Code</a>
-      <a target="_blank" href="https://foodparcel.000webhostapp.com/" class="view-app">View Live Project</a>
     </div>
-  </div>
-  <!--2. Modal for Ecommerce Web App -->
-  <div id="ecommerce-web-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('ecommerce-web-modal')">&times;</span>
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (371).webp" alt="Ecommerce web app" />
-      </div>
-      <h2>E-commerce Web App</h2>
-      <p class="date">May 2024</p>
-      <p>
-       Welcome to the one-stop shop for all your needs. This E-commerce Web App is designed with a focus on user-friendly navigation, ensuring a seamless shopping experience. The project showcases efficient and customer-centric online shopping solutions through innovative design and development.
-      </p>
 
-      <div class="icons">
-        <img src="IMAGE/icon/html.webp" alt="HTML" />
-        <img src="IMAGE/icon/css3.webp" alt="CSS" />
-        <img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" />
-        <img src="IMAGE/icon/bootstrap.webp" alt="Bootstrap" />
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-jquery-8-1175153.png" alt="AJAX" />
-        <img src="IMAGE/icon/php.webp" alt="PHP" />
-        <img src="https://iconape.com/wp-content/png_logo_vector/phpmailer.png" alt="PHPMailer" />
-        <img src="https://ps.w.org/cvw-pb-animation/assets/icon-256x256.png?rev=2077939" alt="AOS" />
-        <img src="IMAGE/icon/mysql.webp" alt="mysql" />
-      </div>
-      <div class="contribution">
-        <p>Contribution:</p>
-        <div>
-          <img src="https://i.postimg.cc/L54yvySH/sub.jpg" alt=""> 
-          <span><p>Subhasisa Sahoo</p></span>
+    <div id="news-api-web-modal" class="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal('news-api-web-modal')" aria-label="Close"><svg width="18" height="18"><use href="#i-close" /></svg></button>
+        <div class="image-container"><img loading="lazy" src="IMAGE/Screenshot (381).webp" alt="news tracker web app" /></div>
+        <h2>Latest News Tracker Web App</h2>
+        <p class="date">June 2024</p>
+        <p>
+          Developed a web app using React.js and a news API to track the latest news in
+          real-time. The app features a sleek, responsive design, delivering up-to-date
+          news articles seamlessly on any device.
+        </p>
+        <div class="icons">
+          <span class="icon-chip"><img src="IMAGE/icon/html.webp" alt="HTML" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/css3.webp" alt="CSS" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" /></span>
+          <span class="icon-chip"><img src="IMAGE/icon/reactjs.webp" alt="React JS" /></span>
+          <span class="icon-chip"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTop95oa3L3azM_q5GPHaWDGDKZOE5mFnqQ&s" alt="News API" /></span>
         </div>
-        <div>
-          <img src="https://i.ibb.co/7GywCHw/Screenshot-2024-10-25-12-00-35-00-1c337646f29875672b5a61192b9010f9.jpg" alt="" srcset="">
-          <p>Nibedita Kar</p> 
-        </div>
-        <div>
-          <img src="https://i.postimg.cc/Qt3YK8nK/Screenshot-2024-06-26-180949.png" alt="">
-          <p>Sipun Sahoo</p>
+        <div class="modal-actions">
+          <a href="#" class="view-app secondary"><svg width="16" height="16"><use href="#i-github" /></svg> View Code</a>
         </div>
       </div>
-      <a target="_blank" href="https://github.com/subhasisa-sahoo/Ecommerce-Online-Web.git" class="view-app">View Code</a>
-      <!-- <a target="_blank" href="https://cshopcum.000webhostapp.com/" class="view-app">View Live Project</a> -->
     </div>
-  </div>
-  <!--3. Modal forgemini-ai Web App -->
-  <div id="geimini-ai-web-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('geimini-ai-web-modal')">&times;</span>
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (380).webp" alt="geimini web app" />
-      </div>
-      <h2>Gemini AI Web App</h2>
-      <p class="date">May 2024</p>
-      <p>
-        Created an AI-powered web app using React.js and Google APIs. This app understands and responds to user input,
-        works smoothly on any device, and has an easy-to-use interface. It showcases my skills in building smart,
-        responsive web applications.
-      </p>
+  </section>
 
-      <div class="icons">
-        <img src="IMAGE/icon/html.webp" alt="HTML" />
-        <img src="IMAGE/icon/css3.webp" alt="CSS" />
-        <img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" />
-        <img src="IMAGE/icon/reactjs.webp" alt="react js">
-        <img src="https://cdn-icons-png.freepik.com/512/10329/10329422.png" alt="" srcset="">
-      </div>
-      <a href="https://github.com/subhasisa-sahoo/Gemini-AI-Clone.git" class="view-app">View Code</a>
-      <a href="https://clone-ai.netlify.app/" class="view-app">View Live Project</a>
-    </div>
-  </div>
-  <!--4. Modal news-api Web App -->
-  <div id="news-api-web-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('news-api-web-modal')">&times;</span>
-      <div class="image-container">
-        <img loading="lazy" src="IMAGE/Screenshot (381).webp" alt="news-api web app" />
-      </div>
-      <h2>Latest News tracker Web App</h2>
-      <p class="date">Jun 2024</p>
-      <p>
-        Developed a web app using React.js and a news API to track the latest news in real-time. The app features a
-        sleek, responsive design, delivering up-to-date news articles seamlessly on any device.
-      </p>
-
-      <div class="icons">
-        <img src="IMAGE/icon/html.webp" alt="HTML" />
-        <img src="IMAGE/icon/css3.webp" alt="CSS" />
-        <img src="IMAGE/icon/javascript--v1.webp" alt="JavaScript" />
-        <img src="IMAGE/icon/reactjs.webp" alt="react js">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTop95oa3L3azM_q5GPHaWDGDKZOE5mFnqQ&s"
-          style="width: 80px;" alt="" srcset="">
-      </div>
-      <a href="#" class="view-app">View Code</a>
-      <!-- <a href="#" class="view-app">View Live Project</a> -->
-    </div>
-  </div>
-</project-section>
-
-
-<!-- CONTACT SECTION -->
-<section class="contact-section" id="contact">
-  <div class="contact-container">
-    <div class="contact-form">
-      <h2>Get in Touch</h2>
-      <form action="https://formsubmit.co/39d7876ac044db010262f9e24baa199f" method="POST" >
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://subhasisa-sahoo.github.io/">
-        <button type="submit">Send</button>
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="hero-blob blob-c" data-parallax="0.1"></div>
+    <div class="contact-container" data-reveal>
+      <p class="eyebrow center">Contact</p>
+      <h2>Get in touch</h2>
+      <form action="https://formsubmit.co/39d7876ac044db010262f9e24baa199f" method="POST">
+        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required /></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required /></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea></div>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://subhasisa-sahoo.github.io/" />
+        <button type="submit">Send message</button>
       </form>
-      <p class="note">
-        Feel free to reach out to me for any questions or opportunities!
-      </p>
+      <p class="note">Feel free to reach out for any questions or opportunities!</p>
     </div>
-  </div>
-</section>
-<footer>Made With ❤️ By Subhasisa</footer>
-</Desktop-View>
-<script>
-  AOS.init();
-</script>
-<script src="script.js"></script>
+  </section>
+
+  <footer>Made with ❤️ by Subhasisa · <span id="year"></span></footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
