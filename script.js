@@ -1,4 +1,14 @@
 /* ============================================================
+  PORTFOLIO LOADER
+============================================================ */
+const portfolioLoader = document.getElementById('portfolio-loader');
+if (portfolioLoader) {
+  const hideLoader = () => portfolioLoader.classList.add('is-hidden');
+  window.addEventListener('load', () => setTimeout(hideLoader, 4800), { once: true });
+  setTimeout(hideLoader, 6500);
+}
+
+/* ============================================================
    MOBILE NAV
 ============================================================ */
 const mobileMenu = document.getElementById('mobile-menu');
