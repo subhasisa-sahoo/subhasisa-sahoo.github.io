@@ -63,6 +63,112 @@ svg use, .social-icons svg, .btn-primary svg, .btn-ghost svg, .info-item svg,
 }
 
 /* =========================================================
+   PORTFOLIO LOADER
+========================================================= */
+.portfolio-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--bg);
+  color: var(--text);
+  transition: opacity 0.6s var(--ease), visibility 0.6s var(--ease);
+}
+.portfolio-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.raw_logo { width: min(440px, 78vw); height: auto; overflow: visible; }
+.myHexagon {
+  stroke: var(--accent-2);
+  stroke-width: 4;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: loaderDash 2.3s linear forwards;
+}
+.hexagon-inner { animation-delay: 0.15s; stroke: var(--accent); }
+.loader-letter {
+  stroke: var(--text);
+  stroke-width: 3;
+  fill: none;
+  opacity: 0;
+  animation: loaderFade 0.8s var(--ease) 1.5s forwards;
+}
+.loader-name {
+  margin-top: -48px;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: loaderFade 0.8s var(--ease) 1.7s forwards;
+}
+.loader-name span { color: var(--accent-2); }
+.loader-caption {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: loaderFade 0.8s var(--ease) 1.9s forwards;
+}
+@keyframes loaderDash { to { stroke-dashoffset: 0; } }
+@keyframes loaderFade { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-loader { transition: none; }
+  .myHexagon { stroke-dashoffset: 0; animation: none; }
+  .loader-letter, .loader-name, .loader-caption { opacity: 1; animation: none; }
+}
+
+/* Circular SS loader */
+.portfolio-loader { width: 100vw; background: #090b16; color: #fff; transition: opacity 0.9s ease, visibility 0.9s ease; overflow: hidden; isolation: isolate; }
+.portfolio-loader::before {
+  content: "";
+  position: absolute;
+  width: min(420px, 92vw);
+  height: min(420px, 92vw);
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.25), rgba(34, 211, 238, 0.08) 42%, transparent 70%);
+  filter: blur(42px);
+  opacity: 0.9;
+  animation: loaderGlow 7s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+.loader-content { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; z-index: 1; }
+.loader-logo { width: min(220px, 55vw); height: auto; overflow: visible; }
+.outer-ring, .inner-ring { fill: none; stroke: #fff; }
+.outer-ring { stroke-width: 1.5; stroke-dasharray: 520; stroke-dashoffset: 520; animation: drawRing 1.5s ease forwards, pulseRing 2s ease-in-out 2s infinite; }
+.inner-ring { stroke-width: 1; opacity: 0.35; stroke-dasharray: 440; stroke-dashoffset: 440; transform-origin: center; animation: drawInnerRing 1.2s ease forwards 0.3s, rotateRing 8s linear 2s infinite; }
+.ss { font-family: var(--font-display); font-size: 60px; font-weight: 700; letter-spacing: 6px; fill: transparent; stroke: #fff; stroke-width: 1.5; stroke-dasharray: 350; stroke-dashoffset: 350; animation: drawSS 1.5s ease forwards 1s, fillSS 0.7s ease forwards 2.3s; }
+.loader-name { margin-top: -5px; font-size: clamp(18px, 5vw, 24px); font-weight: 500; letter-spacing: clamp(2px, 0.8vw, 4px); color: #fff; opacity: 0; transform: translateY(15px); animation: revealName 1s ease forwards 2.5s; }
+.loader-caption { margin-top: 10px; font-family: var(--font-mono); font-size: clamp(8px, 2vw, 10px); letter-spacing: clamp(2px, 0.6vw, 4px); color: #888; text-transform: uppercase; opacity: 0; animation: fadeIn 0.8s ease forwards 2.9s; }
+.progress-container { width: min(200px, 52vw); height: 2px; margin-top: 25px; background: rgba(255,255,255,0.12); overflow: hidden; opacity: 0; animation: fadeIn 0.5s ease forwards 2.7s; }
+.progress { width: 0; height: 100%; background: #fff; animation: loading 1.6s ease forwards 2.8s; }
+@keyframes drawRing { to { stroke-dashoffset: 0; } }
+@keyframes drawInnerRing { to { stroke-dashoffset: 0; } }
+@keyframes drawSS { to { stroke-dashoffset: 0; } }
+@keyframes fillSS { to { fill: #fff; stroke-width: 0; } }
+@keyframes revealName { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes loading { to { width: 100%; } }
+@keyframes pulseRing { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@keyframes rotateRing { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes loaderGlow { from { transform: translate(-50%, -50%) scale(0.94); } to { transform: translate(-50%, -50%) scale(1.06); } }
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-loader::before { animation: none; }
+  .outer-ring, .inner-ring, .ss { stroke-dashoffset: 0; animation: none; }
+  .ss { fill: #fff; stroke-width: 0; }
+  .loader-name, .loader-caption, .progress-container { opacity: 1; transform: none; animation: none; }
+  .progress { width: 100%; animation: none; }
+}
+
+/* =========================================================
    SPARKLE BACKDROP + PROGRESS BAR
 ========================================================= */
 #stars {
@@ -96,6 +202,7 @@ body[data-theme="light"] #stars { opacity: 0.28; }
 .blob-a { width: 420px; height: 420px; top: -120px; right: -80px; background: radial-gradient(circle, var(--accent), transparent 70%); }
 .blob-b { width: 320px; height: 320px; bottom: -60px; left: -60px; background: radial-gradient(circle, var(--accent-2), transparent 70%); opacity: 0.35; }
 .blob-c { width: 380px; height: 380px; top: 20%; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, var(--accent), transparent 70%); opacity: 0.25; }
+.contact-section { overflow: hidden; }
 
 /* =========================================================
    SCROLL REVEAL
@@ -332,6 +439,7 @@ section h2, .about-section h2, .skills-section h2, .experience-section h2, .edu-
 .about-meta { margin: 22px 0 18px; }
 .info-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: var(--text-muted); }
 .info-item svg { color: var(--accent); flex-shrink: 0; }
+.info-item p { margin: 0; line-height: 1.5; }
 
 /* =========================================================
    SKILLS
@@ -538,7 +646,7 @@ section h2, .about-section h2, .skills-section h2, .experience-section h2, .edu-
 /* =========================================================
    PROJECTS
 ========================================================= */
-.project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: stretch; }
 .card {
   cursor: pointer;
   border-radius: var(--radius);
@@ -548,6 +656,7 @@ section h2, .about-section h2, .skills-section h2, .experience-section h2, .edu-
   overflow: hidden;
   padding: 20px;
   display: flex; flex-direction: column; gap: 12px;
+  height: 100%;
   transition: transform 0.35s var(--ease), border-color 0.35s;
 }
 .card:hover { transform: translateY(-8px); border-color: var(--accent); }
@@ -555,7 +664,7 @@ section h2, .about-section h2, .skills-section h2, .experience-section h2, .edu-
 .card .date { font-size: 13px; color: var(--text-muted); }
 .card > p:not(.date) {
   color: var(--text-muted); font-size: 14px;
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
@@ -578,7 +687,8 @@ section h2, .about-section h2, .skills-section h2, .experience-section h2, .edu-
 }
 .modal.show { opacity: 1; }
 .modal-content {
-  max-width: 640px; margin: 0 auto; position: relative;
+  width: min(640px, 100%); max-height: calc(100dvh - 120px); overflow-y: auto;
+  margin: 0 auto; position: relative;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -695,13 +805,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    RESPONSIVE
 ========================================================= */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; }
+  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
   .hero-right { order: -1; max-width: 320px; margin: 0 auto 20px; }
   .about-container { grid-template-columns: 1fr; }
   .about-photo-frame { max-width: 260px; margin: 0 auto; }
+  .skill-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar-container { padding: 14px 20px; }
   .nav-list {
     position: fixed; top: 62px; left: 0; width: 100%; height: calc(100vh - 62px);
@@ -710,6 +821,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     backdrop-filter: blur(14px);
     transform: translateX(-100%);
     transition: transform 0.35s var(--ease);
+    overflow-y: auto;
+    padding: 32px 20px;
   }
   .nav-list.active { transform: translateX(0); }
   .menu-toggle { display: flex; }
@@ -722,6 +835,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-bio { max-width: 100%; }
   .typing-container { flex-wrap: wrap; }
   .dynamic-text-container { min-width: 180px; }
+  .skill-showcase { grid-template-columns: 1fr; }
   .contact-container { max-width: 100%; }
   .contact-container form { text-align: left; }
   .project-container { grid-template-columns: 1fr; }
@@ -737,9 +851,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero { padding: 88px 18px 44px; }
   .eyebrow { font-size: 11px; margin-bottom: 12px; }
   .hero-name { font-size: clamp(2rem, 10vw, 2.6rem); margin-bottom: 14px; }
+  .hero-name, .hero-bio, .about-right, .t-card, .modal-content { overflow-wrap: anywhere; }
   .hero-name .char { animation-delay: calc(var(--i) * 0.022s); }
   .typing-container { font-size: 1.1rem; margin-bottom: 18px; }
   .status-pill { font-size: 12.5px; padding: 8px 12px; gap: 8px; margin-bottom: 18px; }
+  .status-pill { align-items: flex-start; }
+  .status-pill .pulse-dot { margin-top: 0.35em; }
   .hero-bio { font-size: 14px; margin-bottom: 22px; }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; margin-bottom: 20px; }
   .btn-primary, .btn-ghost { justify-content: center; padding: 12px 18px; }
@@ -752,6 +869,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   .about-right .social-icons { justify-content: center; }
   .about-meta { margin: 18px 0 14px; }
+  .info-item { align-items: flex-start; }
+  .info-item svg { margin-top: 0.25em; }
 
   .skills-container { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .skill-item { padding: 12px 4px; }
@@ -759,8 +878,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   .exp-card { padding: 20px; border-radius: 14px; }
   .exp-head { gap: 12px; }
+  .exp-head, .t-card-head { align-items: flex-start; }
   .t-logo-lg { width: 46px; height: 46px; border-radius: 10px; }
   .exp-card h3 { font-size: 1.1rem; }
+  .exp-head > div:last-child, .t-card-head > div:last-child { min-width: 0; }
 
   .timeline { padding-left: 22px; }
   .t-dot { left: -29px; width: 10px; height: 10px; }
@@ -771,10 +892,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .t-desc { font-size: 13.5px; }
 
   .card { padding: 16px; }
+  .card { min-height: 390px; }
   .image-container { height: 130px; }
 
-  .modal { padding: 26px 10px; }
-  .modal-content { padding: 18px; border-radius: 14px; }
+  .modal { padding: 12px 8px; }
+  .modal-content { width: 100%; max-height: calc(100dvh - 24px); padding: 48px 16px 18px; border-radius: 14px; }
   .modal-content h2 { font-size: 1.2rem; }
   .icon-chip { width: 36px; height: 36px; }
   .icon-chip img { width: 18px; height: 18px; }
